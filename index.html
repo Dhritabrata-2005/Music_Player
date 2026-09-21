@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="music-player">
+
+        <h1>🎵 Music Player</h1>
+
+        <!-- Album Artwork -->
+        <div class="album-art">
+            <img id="albumImage"
+                 src="https://picsum.photos/id/1015/500/500"
+                 alt="Album Cover">
+        </div>
+
+        <!-- Song Information -->
+        <div class="song-info">
+            <h2 id="songTitle">Summer Vibes</h2>
+            <p id="artistName">Artist One</p>
+        </div>
+
+        <!-- Audio -->
+        <audio id="audio"></audio>
+
+        <!-- Progress -->
+        <div class="progress-container">
+            <span id="currentTime">0:00</span>
+
+            <input
+                type="range"
+                id="progressBar"
+                value="0"
+                min="0"
+                max="100"
+            >
+
+            <span id="duration">0:00</span>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+
+            <button id="prevBtn" title="Previous">
+                ⏮
+            </button>
+
+            <button id="playBtn" class="play-btn" title="Play">
+                ▶
+            </button>
+
+            <button id="nextBtn" title="Next">
+                ⏭
+            </button>
+
+        </div>
+
+        <!-- Volume -->
+        <div class="volume-container">
+
+            <span>🔊</span>
+
+            <input
+                type="range"
+                id="volumeBar"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+            >
+
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist">
+
+            <h3>Playlist</h3>
+
+            <div id="playlistItems"></div>
+
+        </div>
+
+        <!-- Autoplay -->
+        <label class="autoplay">
+            <input type="checkbox" id="autoplay">
+            Autoplay next song
+        </label>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
